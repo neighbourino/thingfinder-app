@@ -13,7 +13,11 @@ class ThingController extends Controller
      */
     public function index()
     {
-        //
+        $things = Thing::all();
+
+        return view('things.index', [
+            'things' => $things,
+        ]);
     }
 
     /**
