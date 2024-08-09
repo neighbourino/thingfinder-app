@@ -64,4 +64,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function isFilamentAdmin()
+    {
+        return $this->email === 'janus.helkjaer@gmail.com';
+    }
 }
